@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="@dimen/_72sdp"
+            android:layout_height="@dimen/_72sdp"
+            android:src="@drawable/nangis"
+            android:background="@drawable/background_icon"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="@dimen/_8sdp" />
+
+        <LinearLayout
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:gravity="left"
+                android:text="You got 1000 points"
+                android:textColor="#111111"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="Halo, "
+                android:textColor="#111111"
+                android:textSize="@dimen/_20sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="@dimen/_4sdp"
+                android:gravity="left"
+                android:text="Welcome Back!"
+                android:textColor="#111111"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageSignOut"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_icon"
+            android:padding="@dimen/_6sdp"
+            android:src="@drawable/ic_notifications"
+            android:tint="#111111" />
+
+    </LinearLayout>
+
+    <!--    Body-->
+
+    <!--    LOGOUT-->
+    <!--    <androidx.appcompat.widget.AppCompatImageView-->
+    <!--        android:id="@+id/imageSignOut"-->
+    <!--        android:layout_width="@dimen/_40sdp"-->
+    <!--        android:layout_height="@dimen/_40sdp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:background="@drawable/background_icon"-->
+    <!--        android:padding="@dimen/_6sdp"-->
+    <!--        android:src="@drawable/ic_logout"-->
+    <!--        android:tint="#111111" />-->
+
+    <!--    Footer-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:layout_editor_absoluteX="0dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Discover Yourself"
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Evaluate the right course of action of you and build a personalised plan for you "
+                android:textStyle="normal"
+                android:textSize="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

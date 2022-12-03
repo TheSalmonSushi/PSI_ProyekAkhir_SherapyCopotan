@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_mobile"
+    app:startDestination="@id/homepageFragment">
+    <fragment
+        android:id="@+id/homepageFragment"
+        android:name="com.example.sherapy.fragments.HomepageFragment"
+        android:label="HomepageFragment"
+        tools:layout="@layout/fragment_homepage"/>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.sherapy.fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.sherapy.fragments.ArticleFragment"
+        android:label="ArticleFragment"
+        tools:layout="@layout/fragment_article"/>
+    <fragment
+        android:id="@+id/konselingFragment"
+        android:name="com.example.sherapy.activities.KonselingActivity"
+        android:label="KonselingFragment"
+        tools:layout="@layout/activity_konseling">
+        <action
+            android:id="@+id/action_konselingFragment_to_konselDetailActivity"
+            app:destination="@id/konselDetailActivity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment1Fragment"
+        android:name="com.example.sherapy.activities.Fragment1Activity"
+        android:label="Fragment1Activity"
+        tools:layout="@layout/fragment1">
+        <action
+            android:id="@+id/action_fragment1Fragment_to_fragment2Activity"
+            app:destination="@id/fragment2Activity" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment2Activity"
+        android:name="com.example.activities.Fragment2Activity"
+        android:label="Fragment2Activity"
+        tools:layout="@layout/fragment2">
+        <action
+            android:id="@+id/action_fragment2Activity_to_fragment3Activity"
+            app:destination="@id/fragment3Activity" />
+    </fragment>
+    <fragment
+        android:id="@+id/konselDetailActivity"
+        android:name="com.example.sherapy.activities.KonselDetailActivity"
+        android:label="KonselDetailActivity"
+        tools:layout="@layout/activity_konseldetail">
+        <action
+            android:id="@+id/action_konselDetailActivity_to_pembayaranActivity"
+            app:destination="@id/pembayaranActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/pembayaranActivity"
+        android:name="com.example.sherapy.activities.PembayaranActivity"
+        android:label="PembayaranActivity"
+        tools:layout="@layout/activity_pembayaran">
+        <action
+            android:id="@+id/action_pembayaranActivity_to_bayarSuccessActivity"
+            app:destination="@id/bayarSuccessActivity" />
+        <action
+            android:id="@+id/action_pembayaranActivity_to_popupPembayaran"
+            app:destination="@id/popupPembayaran" />
+    </fragment>
+    <fragment
+        android:id="@+id/bayarSuccessActivity"
+        android:name="com.example.sherapy.activities.BayarSuccessActivity"
+        android:label="BayarSuccessActivity"
+        tools:layout="@layout/activity_bayarsuccess">
+        <action
+            android:id="@+id/action_bayarSuccessActivity_to_homepageFragment"
+            app:destination="@id/homepageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/popupPembayaran"
+        android:name="com.example.sherapy.activities.PopupPembayaran"
+        android:label="PopupPembayaran"
+        tools:layout="@layout/popup_pembayaran">
+        <action
+            android:id="@+id/action_popupPembayaran_to_pembayaranActivity"
+            app:destination="@id/pembayaranActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment3Activity"
+        android:name="com.example.rpl.Fragment3Activity"
+        android:label="Fragment3Activity"
+        tools:layout="@layout/fragment3">
+        <action
+            android:id="@+id/action_fragment3Activity_to_fragment4Activity"
+            app:destination="@id/fragment4Activity" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragment4Activity"
+        android:name="com.example.activities.Fragment4Activity"
+        android:label="Fragment4Activity"
+        tools:layout="@layout/fragment4">
+        <action
+            android:id="@+id/action_fragment4Activity_to_homepageFragment"
+            app:destination="@id/homepageFragment" />
+    </fragment>
+
+</navigation>
