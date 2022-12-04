@@ -120,8 +120,11 @@
     <fragment
         android:id="@+id/moodFragment"
         android:name="com.example.activities.Fragment4Activity"
-        android:label="Fragment4Activity"
+        android:label="moodFragment"
         tools:layout="@layout/fragment4">
+        <action
+            android:id="@+id/action_moodFragment_to_homepageFragment"
+            app:destination="@id/homepageFragment" />
     </fragment>
 
 </navigation>

@@ -22,7 +22,7 @@ class Fragment4Activity : Fragment() {
     ): View? {
         binding = Fragment4Binding.inflate(layoutInflater, container, false)
         binding.imageButton3.setOnClickListener {
-            findNavController().navigate(Fragment4ActivityDirections.actionFragment4ActivityToHomepageFragment())
+            findNavController().navigate(Fragment4ActivityDirections.actionMoodFragmentToHomepageFragment())
         }
         return binding.root
     }
