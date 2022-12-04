@@ -7,9 +7,9 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/articleFragment"
+        android:id="@+id/moodFragment"
         android:icon="@drawable/ic_health"
-        android:title="Health" />
+        android:title="Mood" />
 
     <item
         android:id="@+id/fragment1Fragment"
@@ -18,12 +18,13 @@
 
     <item
         android:id="@+id/konselingFragment"
-        android:icon="@drawable/ic_chat"
-        android:title="Chat" />
+        android:icon="@drawable/ic_personal"
+        android:title="Counseling" />
 
     <item
-        android:id="@+id/profileFragment"
-        android:icon="@drawable/ic_personal"
-        android:title="Personal" />
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/ic_chat"
+        android:title="Article" />
+
 
 </menu>

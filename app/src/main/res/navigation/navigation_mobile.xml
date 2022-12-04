@@ -8,17 +8,32 @@
         android:id="@+id/homepageFragment"
         android:name="com.example.sherapy.fragments.HomepageFragment"
         android:label="HomepageFragment"
-        tools:layout="@layout/fragment_homepage"/>
+        tools:layout="@layout/fragment_homepage">
+        <action
+            android:id="@+id/action_homepageFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homepageFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.sherapy.fragments.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_homepageFragment"
+            app:destination="@id/homepageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/articleFragment"
         android:name="com.example.sherapy.fragments.ArticleFragment"
         android:label="ArticleFragment"
-        tools:layout="@layout/fragment_article"/>
+        tools:layout="@layout/fragment_article">
+        <action
+            android:id="@+id/action_articleFragment_to_homepageFragment"
+            app:destination="@id/homepageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/konselingFragment"
         android:name="com.example.sherapy.activities.KonselingActivity"
@@ -55,6 +70,9 @@
         <action
             android:id="@+id/action_konselDetailActivity_to_pembayaranActivity"
             app:destination="@id/pembayaranActivity" />
+        <action
+            android:id="@+id/action_konselDetailActivity_to_konselingFragment"
+            app:destination="@id/konselingFragment" />
     </fragment>
     <fragment
         android:id="@+id/pembayaranActivity"
@@ -67,6 +85,9 @@
         <action
             android:id="@+id/action_pembayaranActivity_to_popupPembayaran"
             app:destination="@id/popupPembayaran" />
+        <action
+            android:id="@+id/action_pembayaranActivity_to_konselDetailActivity"
+            app:destination="@id/konselDetailActivity" />
     </fragment>
     <fragment
         android:id="@+id/bayarSuccessActivity"
@@ -93,17 +114,14 @@
         tools:layout="@layout/fragment3">
         <action
             android:id="@+id/action_fragment3Activity_to_fragment4Activity"
-            app:destination="@id/fragment4Activity" />
+            app:destination="@id/homepageFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/fragment4Activity"
+        android:id="@+id/moodFragment"
         android:name="com.example.activities.Fragment4Activity"
         android:label="Fragment4Activity"
         tools:layout="@layout/fragment4">
-        <action
-            android:id="@+id/action_fragment4Activity_to_homepageFragment"
-            app:destination="@id/homepageFragment" />
     </fragment>
 
 </navigation>

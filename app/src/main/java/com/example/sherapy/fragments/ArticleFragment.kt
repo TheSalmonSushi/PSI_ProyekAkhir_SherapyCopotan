@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sherapy.R
 import com.example.sherapy.databinding.FragmentArticleBinding
@@ -30,6 +31,9 @@ class ArticleFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentArticleBinding.inflate(layoutInflater)
+        binding.imageButton.setOnClickListener {
+            findNavController().navigate(ArticleFragmentDirections.actionArticleFragmentToHomepageFragment())
+        }
 
         fetchNews()
 

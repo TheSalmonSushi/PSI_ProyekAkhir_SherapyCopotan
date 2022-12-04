@@ -1,20 +1,28 @@
 package com.example.sherapy.fragments
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sherapy.R
 import com.example.sherapy.databinding.ActivityMainBinding
 import com.example.sherapy.databinding.FragmentHomepageBinding
 import com.example.sherapy.utilities.Constants
+import com.example.sherapy.utilities.NewsAdapter
+import com.example.sherapy.utilities.OnNewsClickListener
 import com.example.sherapy.utilities.PreferenceManager
+import com.kwabenaberko.newsapilib.models.Article
 
 class HomepageFragment : Fragment() {
 
     private lateinit var binding: FragmentHomepageBinding
     private lateinit var preferenceManager: PreferenceManager
+    val newsItem = arrayListOf<Article>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,7 +31,12 @@ class HomepageFragment : Fragment() {
         binding = FragmentHomepageBinding.inflate(layoutInflater)
 
         preferenceManager = PreferenceManager(requireContext())
-
+        binding.imageProfile.setOnClickListener{
+            findNavController().navigate(HomepageFragmentDirections.actionHomepageFragmentToProfileFragment())
+        }
+        binding.showmore.setOnClickListener{
+            findNavController().navigate(HomepageFragmentDirections.actionHomepageFragmentToArticleFragment())
+        }
         loadUserDetails()
 //        getToken()
 //        setListeners()
@@ -41,6 +54,15 @@ class HomepageFragment : Fragment() {
 //        val bytes: ByteArray = Base64.decode(preferenceManager.getString(Constants.KEY_IMAGE), Base64.DEFAULT)
 //        val bitmap: Bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
 //        binding.imageProfile.setImageBitmap(bitmap)
+    }
+
+    private fun bindNews() {
+        val adapter = NewsAdapter(newsItem, OnNewsClickListener {
+            val uri = Uri.parse(it)
+            startActivity(Intent(Intent.ACTION_VIEW, uri))
+        })
+        binding.rvBerita.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.rvBerita.adapter = adapter
     }
 
 //    private fun showToast(message: String) {
