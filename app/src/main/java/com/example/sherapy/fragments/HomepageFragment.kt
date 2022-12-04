@@ -44,6 +44,7 @@ class HomepageFragment : Fragment() {
             findNavController().navigate(HomepageFragmentDirections.actionHomepageFragmentToArticleFragment())
         }
         loadUserDetails()
+        fetchNews()
 //        getToken()
 //        setListeners()
 
