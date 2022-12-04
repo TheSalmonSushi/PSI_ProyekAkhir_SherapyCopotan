@@ -23,10 +23,10 @@ class WelcomeScreen : AppCompatActivity() {
         )
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, SignInActivity::class.java)
             startActivity(intent)
             finish()
-        }, 3000)
+        }, 3500)
 
         val logoAnimation = AnimationUtils.loadAnimation(this, R.anim.fade_in)
         welcomeLogo.startAnimation(logoAnimation)
