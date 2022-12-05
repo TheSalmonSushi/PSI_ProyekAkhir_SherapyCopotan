@@ -76,8 +76,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="411" />
-                            <option name="y" value="-269" />
+                            <option name="x" value="429" />
+                            <option name="y" value="-295" />
                           </Point>
                         </option>
                         <option name="myPositions">
@@ -220,6 +220,15 @@
                             <option name="x" value="688" />
                             <option name="y" value="32" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_moodTracker_to_moodFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

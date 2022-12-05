@@ -1,4 +1,4 @@
-package com.example.activities
+package com.example.sherapy.activities
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,8 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.sherapy.activities.PembayaranActivityDirections
-import com.example.sherapy.databinding.Fragment3Binding
 import com.example.sherapy.databinding.Fragment4Binding
 import com.example.sherapy.utilities.PreferenceManager
 

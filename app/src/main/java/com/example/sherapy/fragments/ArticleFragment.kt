@@ -43,8 +43,8 @@ class ArticleFragment : Fragment() {
     private fun fetchNews() {
         newsApiClient.getEverything(
             EverythingRequest.Builder()
-                .q("Mental Health OR Mental Health Issue OR Mental OR Mental health")
-                .language("en")
+                .q("Mental Health OR Depression OR Mental OR Mental health OR Loneliness")
+                .language("id")
                 .build(),
             object: NewsApiClient.ArticlesResponseCallback {
                 override fun onSuccess(response: ArticleResponse?) {

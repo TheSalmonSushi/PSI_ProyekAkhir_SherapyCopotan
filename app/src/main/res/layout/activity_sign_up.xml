@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,14 +8,17 @@
     android:clipToPadding="false"
     android:overScrollMode="never"
     android:padding="@dimen/_24sdp"
-    android:scrollbars="none"
+    android:background="@drawable/background3"
     tools:context=".activities.SignUpActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,13 +29,13 @@
             android:textColor="@color/primary_text"
             android:textSize="@dimen/_18sdp"
             android:textStyle="bold" />
-        
+
         <FrameLayout
             android:id="@+id/layoutImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/_20sdp" >
+            android:layout_marginTop="@dimen/_20sdp">
 
             <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/imageProfil"
@@ -41,7 +44,7 @@
                 android:background="@drawable/background_image"
                 android:scaleType="centerCrop"
                 app:riv_oval="true" />
-            
+
             <TextView
                 android:id="@+id/textAddImage"
                 android:layout_width="wrap_content"
@@ -116,19 +119,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_16sdp"
-            android:animateLayoutChanges="true" >
+            android:animateLayoutChanges="true">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_50sdp"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:text="Sign Up"
-                android:textColor="@color/primary_text"
-                android:textSize="@dimen/_13ssp"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:fontFamily="@font/lexendreguler"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15ssp"
                 android:textStyle="bold"
-                app:cornerRadius="@dimen/_8sdp" />
-            
+                app:cornerRadius="@dimen/_12sdp"
+                android:backgroundTint="#E1A5F2"/>
+
             <ProgressBar
                 android:id="@+id/progressBar"
                 android:layout_width="@dimen/_25sdp"
@@ -150,4 +156,4 @@
 
     </LinearLayout>
 
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

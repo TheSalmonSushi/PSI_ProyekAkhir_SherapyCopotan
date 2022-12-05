@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.activities.Fragment4ActivityDirections
 import com.example.sherapy.R
 import com.example.sherapy.databinding.ActivityMoodTrackerBinding
 import com.example.sherapy.databinding.Fragment4Binding

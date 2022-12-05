@@ -5,13 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2">
+    android:background="@drawable/background">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="4dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -39,9 +38,8 @@
             android:layout_height="@dimen/_50sdp"
             android:layout_marginStart="38dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/background_icon"
             android:scaleType="centerCrop"
-            android:src="@drawable/profile"
+            android:background="@drawable/profile"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/frameLayout2"
             app:riv_corner_radius="@dimen/_8sdp" />
@@ -287,19 +285,23 @@
 
         </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_berita2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+        <RelativeLayout
+            android:layout_width="370dp"
+            android:layout_height="190dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="10dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="20dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:orientation="horizontal"
-            app:layout_constraintTop_toBottomOf="@id/linearLayout6"
-            tools:listitem="@layout/item_news" />
+            android:background="@drawable/card"
+            app:layout_constraintStart_toStartOf="@+id/frameLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_berita2"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_news" />
+        </RelativeLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

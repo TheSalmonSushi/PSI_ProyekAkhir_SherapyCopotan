@@ -55,7 +55,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragment2Activity"
-        android:name="com.example.activities.Fragment2Activity"
+        android:name="com.example.sherapy.activities.Fragment2Activity"
         android:label="Fragment2Activity"
         tools:layout="@layout/fragment2">
         <action
@@ -109,7 +109,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragment3Activity"
-        android:name="com.example.rpl.Fragment3Activity"
+        android:name="com.example.sherapy.activities.Fragment3Activity"
         android:label="Fragment3Activity"
         tools:layout="@layout/fragment3">
         <action
@@ -119,7 +119,7 @@
 
     <fragment
         android:id="@+id/moodFragment"
-        android:name="com.example.activities.Fragment4Activity"
+        android:name="com.example.sherapy.activities.Fragment4Activity"
         android:label="moodFragment"
         tools:layout="@layout/fragment4">
         <action
