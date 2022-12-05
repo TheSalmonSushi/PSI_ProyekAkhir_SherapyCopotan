@@ -22,13 +22,11 @@ import com.google.firebase.ktx.Firebase
 import java.io.ByteArrayOutputStream
 import java.io.FileNotFoundException
 import java.io.InputStream
-import java.util.UUID.randomUUID
 
 class SignUpActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivitySignUpBinding
     private lateinit var preferenceManager: PreferenceManager
-    private lateinit var encodedImage: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -111,7 +109,7 @@ class SignUpActivity : AppCompatActivity() {
                 if (result.data != null) {
                     val imageUri: Uri? = result.data!!.data
                     try {
-                        val inputStream: InputStream = contentResolver.openInputStream(imageUri!!)!!!!
+                        val inputStream: InputStream = contentResolver.openInputStream(imageUri!!)!!
                         val bitmap: Bitmap = BitmapFactory.decodeStream(inputStream)
                         binding.imageProfil.setImageBitmap(bitmap)
                         binding.textAddImage.visibility = View.GONE
@@ -124,10 +122,7 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun isValidSignUpDetails(): Boolean {
-        if ( encodedImage == null ) {
-            showToast("Select Profile Image")
-            return false
-        } else if ( binding.inputName.text.toString().trim().isEmpty() ) {
+        if ( binding.inputName.text.toString().trim().isEmpty() ) {
             showToast("Enter Name")
             return false
         } else if ( binding.inputEmail.text.toString().trim().isEmpty() ) {
@@ -142,7 +137,7 @@ class SignUpActivity : AppCompatActivity() {
         } else if ( binding.inputConfirmPassword.text.toString().trim().isEmpty() ) {
             showToast("Confirm New Password")
             return false
-        } else if ( !binding.inputPassword.text.toString().equals(binding.inputConfirmPassword.text.toString()) ) {
+        } else if (binding.inputPassword.text.toString() != binding.inputConfirmPassword.text.toString()) {
             showToast("Password & Confirm Password Must Be Same")
             return false
         } else {
