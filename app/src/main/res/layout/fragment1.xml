@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".Fragment1Activity">
+    tools:context=".activities.Fragment1Activity">
 
 
     <ImageView
@@ -24,7 +24,7 @@
         android:layout_width="291dp"
         android:layout_height="99dp"
         android:fontFamily="sans-serif"
-        android:text="Soon you will answer an assessment containing 20 quastions. This quastion uses the PHQ-9 and GHQ-12 methods to detect your mental heslth."
+        android:text="Soon you will answer an assessment containing 20 questions. This questions uses the PHQ-9 and GHQ-12 methods to detect your mental health."
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="16dp"
