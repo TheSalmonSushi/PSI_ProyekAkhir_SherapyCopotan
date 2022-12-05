@@ -110,6 +110,7 @@ class SignInActivity : AppCompatActivity() {
                     preferenceManager.putString(Constants.KEY_USER_ID, documentSnapshot.id)
                     documentSnapshot.getString(Constants.KEY_NAME)?.let { preferenceManager.putString(Constants.KEY_NAME, it) }
                     documentSnapshot.getString(Constants.KEY_IMAGE)?.let { preferenceManager.putString(Constants.KEY_USER_ID, it) }
+                    documentSnapshot.getString(Constants.KEY_EMAIL)?.let { preferenceManager.putString(Constants.KEY_EMAIL, it) }
 
                     val intent: Intent = Intent(applicationContext, MainActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
