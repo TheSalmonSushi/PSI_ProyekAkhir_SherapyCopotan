@@ -40,7 +40,7 @@
             android:layout_marginTop="28dp"
             android:background="@drawable/background_icon"
             android:scaleType="centerCrop"
-            android:src="@drawable/nangis"
+            android:src="@drawable/profile"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/frameLayout2"
             app:riv_corner_radius="@dimen/_8sdp" />
@@ -50,11 +50,13 @@
             android:id="@+id/linearLayout5"
             android:layout_width="@dimen/_160sdp"
             android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="88dp"
             android:orientation="vertical"
             android:paddingTop="10dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageProfile"
             app:layout_constraintTop_toTopOf="@+id/frameLayout2">
 
             <LinearLayout
@@ -62,18 +64,18 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/_4sdp"
-                android:layout_marginEnd="8dp"
-                android:ellipsize="end"
-                android:gravity="left"
-                android:maxLines="1"
-                android:text="Halo, "
-                android:textColor="#111111"
-                android:textSize="@dimen/_20sdp"
-                android:textStyle="bold" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="8dp"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:text="Halo, "
+                    android:textColor="#111111"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/textName"
@@ -292,7 +294,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_berita"
+                android:id="@+id/rv_berita2"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_marginTop="6dp"

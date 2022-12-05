@@ -57,6 +57,7 @@ class HomepageFragment : Fragment() {
 
     private fun loadUserDetails() {
         binding.textName.text = preferenceManager.getString(Constants.KEY_NAME)
+        binding.imageProfile
 
 //        val bytes: ByteArray = Base64.decode(preferenceManager.getString(Constants.KEY_IMAGE), Base64.DEFAULT)
 //        val bitmap: Bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.size)
@@ -92,8 +93,8 @@ class HomepageFragment : Fragment() {
             val uri = Uri.parse(it)
             startActivity(Intent(Intent.ACTION_VIEW, uri))
         })
-        binding.rvBerita.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-        binding.rvBerita.adapter = adapter
+        binding.rvBerita2.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+        binding.rvBerita2.adapter = adapter
     }
 
 //    private fun showToast(message: String) {

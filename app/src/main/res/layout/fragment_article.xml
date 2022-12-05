@@ -74,6 +74,5 @@
             app:layout_constraintTop_toBottomOf="@id/tv_berita"
             tools:listitem="@layout/item_news_layout" />
 
-
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

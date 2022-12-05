@@ -28,7 +28,7 @@ class BayarSuccessActivity : Fragment() {
         binding = ActivityBayarsuccessBinding.inflate(layoutInflater, container, false)
 
         binding.appCompatButton.setOnClickListener {
-            findNavController().navigate(PembayaranActivityDirections.actionPembayaranActivityToBayarSuccessActivity())
+            findNavController().navigate(BayarSuccessActivityDirections.actionBayarSuccessActivityToHomepageFragment())
         }
         return binding.root
     }

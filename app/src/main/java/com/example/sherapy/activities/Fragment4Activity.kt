@@ -24,6 +24,12 @@ class Fragment4Activity : Fragment() {
         binding.imageButton3.setOnClickListener {
             findNavController().navigate(Fragment4ActivityDirections.actionMoodFragmentToHomepageFragment())
         }
+        binding.button1.setOnClickListener {
+            findNavController().navigate(Fragment4ActivityDirections.actionMoodFragmentToMoodTracker())
+        }
+        binding.button2.setOnClickListener {
+            findNavController().navigate(Fragment4ActivityDirections.actionMoodFragmentToMoodTracker())
+        }
         return binding.root
     }
 }

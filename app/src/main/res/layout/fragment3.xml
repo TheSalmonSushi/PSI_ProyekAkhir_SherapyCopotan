@@ -78,7 +78,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="0dp"
                 android:layout_marginTop="5dp"
-                android:text="Tenang!! Kami datang membantu"
+                android:text="Tenang!! Kami akan membantu"
                 android:textColor="@color/black"
                 android:textSize="20dp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -135,7 +135,7 @@
                 android:textColor="#FFFF" />
         </LinearLayout>
 
-        <ProgressBar
+        <TextView
             android:id="@+id/progress_bar2"
             android:layout_width="103dp"
             android:layout_height="95dp"
