@@ -21,7 +21,7 @@ class Fragment2Activity : Fragment() {
     lateinit var questionsList:ArrayList<QuestionModel>
     private var index:Int = 0
     lateinit var questionModel: QuestionModel
-
+    private var soalNo:Int=0
     private var correctAnswerCount:Int=0
 
     lateinit var questions:TextView
@@ -29,6 +29,7 @@ class Fragment2Activity : Fragment() {
     lateinit var option2:Button
     lateinit var option3:Button
     lateinit var option4:Button
+    lateinit var soal:TextView
     lateinit var countDown:TextView
 
     override fun onCreateView(
@@ -41,48 +42,79 @@ class Fragment2Activity : Fragment() {
         option2=binding.option2
         option3=binding.option3
         option4=binding.option4
+        soal=binding.soal
         countDown=binding.countdown
 
         questionsList= ArrayList()
-        questionsList.add(QuestionModel("What is actually electricity?","A flow of water","A flow of air","A flow of electrons"," A flow of atoms"))
-        questionsList.add(QuestionModel("What is the speed of sound?","120 km/h","1,200 km/h","400 km/h","700 km/h"))
-        questionsList.add(QuestionModel("What is the main component of the sun?","Liquid lava","Gas","Molten iron","Rock"))
-        questionsList.add(QuestionModel("Which of the following animals can run the fastest?","Cheetah","Leopard","Tiger","Lion"))
-        questionsList.add(QuestionModel("Which company is known for publishing the Mario video game?","Xbox","Nintendo","SEGA","Electronic Arts"))
+        questionsList.add(QuestionModel("Kurang berminat atau bergairah dalam melakukan apapun","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Merasa murung, sedih, atau putus asa","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Sulit tidur/mudah terbangun, atau terlalu banyak tidur","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Merasa lelah atau kurang bertenaga","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Kurang nafsu makan atau terlalu banyak makan","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Kurang percaya diri atau merasa orang yang gagal","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Sulit berkonsentrasi pada sesuatu","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Bergerak atau berbicara sangat lambat atau sebaliknya","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Merasa lebih baik mati atau ingin melukai diri sendiri","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Merasa mampu untuk mengambil keputusan","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Sulit tidur karena khawatir","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Merasa berperan pada sesuatu yang bermanfaat","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Merasa terus menerus dibawah tekanan","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Merasa tidak sanggup mengatasi kesulitan-kesulitan","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Dapat menikmati aktivitas sehari-hari","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Mampu menanggung masalah-masalah","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Merasa tidak bahagia dan tertekan","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Hilang percaya diri","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Berpikiran diri anda tidak berguna","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
+        questionsList.add(QuestionModel("Setelah mempertimbangkan segala hal, merasa bahagia","Tidak pernah","Kurang dari biasanya","Sama seperti biasanya","Lebih dari biasanya"))
 
         binding.option1.setOnClickListener {
-                if (index < 4) {
+            countdown()
+                if (index < 19) {
                     index++
+                    soalNo++
                     questionModel = questionsList[index]
                     setAllQuestions()
                 } else {
+                    gameResult()
                     findNavController().navigate(Fragment2ActivityDirections.actionFragment2ActivityToFragment3Activity())
                 }
             }
             binding.option2.setOnClickListener {
-                if (index < 4) {
+                countdown()
+                if (index < 19) {
                     index++
+                    soalNo++
                     questionModel = questionsList[index]
                     setAllQuestions()
+                    correctAnswerCount += 1
                 } else {
+                    gameResult()
                     findNavController().navigate(Fragment2ActivityDirections.actionFragment2ActivityToFragment3Activity())
                 }
             }
             binding.option3.setOnClickListener {
-                if (index < 4) {
+                countdown()
+                if (index < 19) {
                     index++
+                    soalNo++
                     questionModel = questionsList[index]
                     setAllQuestions()
+                    correctAnswerCount += 2
                 } else {
+                    gameResult()
                     findNavController().navigate(Fragment2ActivityDirections.actionFragment2ActivityToFragment3Activity())
                 }
             }
             binding.option4.setOnClickListener {
-                if (index < 4) {
+                countdown()
+                if (index < 19) {
                     index++
+                    soalNo++
                     questionModel = questionsList[index]
                     setAllQuestions()
+                    correctAnswerCount += 3
                 } else {
+                    gameResult()
                     findNavController().navigate(Fragment2ActivityDirections.actionFragment2ActivityToFragment3Activity())
                 }
             }
@@ -91,6 +123,7 @@ class Fragment2Activity : Fragment() {
         questionModel= questionsList[index]
         setAllQuestions()
         countdown()
+        gameResult()
 
         return binding.root
     }
@@ -113,10 +146,8 @@ class Fragment2Activity : Fragment() {
                 if (index<questionsList.size){
                     questionModel=questionsList[index]
                     setAllQuestions()
-                    resetBackground()
                     enableButton()
                     countdown()
-
                 }
                 else{
                     gameResult()
@@ -124,12 +155,6 @@ class Fragment2Activity : Fragment() {
                 }
             }
         }.start()
-    }
-
-
-    private fun correctAns(option: Button){
-        option.background=resources.getDrawable(R.drawable.right_bg)
-        correctAnswerCount++
     }
 
     private fun gameResult(){
@@ -147,6 +172,7 @@ class Fragment2Activity : Fragment() {
         option2.text=questionModel.option2
         option3.text=questionModel.option3
         option4.text=questionModel.option4
+        binding.soal.text=soalNo.toString()
     }
     private fun enableButton(){
         option1.isClickable=true
@@ -159,12 +185,6 @@ class Fragment2Activity : Fragment() {
         option2.isClickable=false
         option3.isClickable=false
         option4.isClickable=false
-    }
-    private fun resetBackground(){
-        option1.background=resources.getDrawable(R.drawable.btndeteksi)
-        option2.background=resources.getDrawable(R.drawable.btndeteksi)
-        option3.background=resources.getDrawable(R.drawable.btndeteksi)
-        option4.background=resources.getDrawable(R.drawable.btndeteksi)
     }
 
 }

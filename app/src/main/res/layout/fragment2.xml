@@ -50,12 +50,11 @@
 
     <ProgressBar
         android:id="@+id/progressBar"
-        style="@android:style/Widget.ProgressBar.Horizontal"
+        style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="330dp"
         android:layout_height="14dp"
         android:layout_marginTop="42dp"
-        android:outlineAmbientShadowColor="#FFC8F3"
-        android:scrollbarThumbVertical="@drawable/grafikquiz"
+        android:progressDrawable="@drawable/grafikquiz"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/frameLayout2"
@@ -63,7 +62,7 @@
 
     <LinearLayout
         android:layout_width="338dp"
-        android:layout_height="490dp"
+        android:layout_height="510dp"
         android:layout_marginTop="18dp"
         android:background="@drawable/bggg"
         android:orientation="vertical"
@@ -77,13 +76,13 @@
         <TextView
             android:id="@+id/questions"
             android:layout_width="285dp"
-            android:layout_height="85dp"
+            android:layout_height="105dp"
             android:layout_marginStart="28dp"
             android:layout_marginTop="30dp"
             android:fontFamily="@font/intermedium"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis eu fugiat nulla pariatur."
             android:textColor="#464647"
-            android:textSize="22sp"
+            android:textSize="21sp"
             app:layout_constraintVertical_bias="0.222" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -171,22 +170,21 @@
                 android:textColor="@color/black" />
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="180dp"
-                android:layout_marginTop="15dp"
-                android:fontFamily="@font/lexendmedium"
-                android:textColor="@color/black"
-                android:text="1"/>
-
-            <TextView
                 android:id="@+id/soal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="170dp"
                 android:layout_marginTop="15dp"
                 android:fontFamily="@font/lexendmedium"
-                android:textColor="@color/black"
-                android:text="  / 20"/>
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/lexendmedium"
+                android:text="  / 20"
+                android:textColor="@color/black" />
         </LinearLayout>
     </LinearLayout>
 

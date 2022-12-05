@@ -14,8 +14,6 @@ class Fragment3Activity : Fragment() {
 
     private lateinit var binding: Fragment3Binding
     private lateinit var preferenceManager: PreferenceManager
-    lateinit var correctAns: TextView
-    lateinit var totalAns:TextView
     lateinit var performance:TextView
 
     override fun onCreateView(
@@ -23,7 +21,6 @@ class Fragment3Activity : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = Fragment3Binding.inflate(layoutInflater, container, false)
-        correctAns=binding.percent
         performance=binding.performance
 
         binding.button2.setOnClickListener {
@@ -48,7 +45,7 @@ class Fragment3Activity : Fragment() {
                 }
             }
         }
-        correctAns.text = percentage.toString()
+        binding.percent.text = correctAnsNo.toString()
             return binding.root
     }
 }

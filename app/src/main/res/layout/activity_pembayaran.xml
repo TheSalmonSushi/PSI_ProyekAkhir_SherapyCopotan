@@ -199,7 +199,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/interreguler"
                     android:gravity="center"
-                    android:text="Mon"
+                    android:text="Tue"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -210,7 +210,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/interbold"
                     android:gravity="center"
-                    android:text="03"
+                    android:text="04"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -235,7 +235,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/interreguler"
                     android:gravity="center"
-                    android:text="Mon"
+                    android:text="Wed"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -246,7 +246,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/interbold"
                     android:gravity="center"
-                    android:text="03"
+                    android:text="05"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -271,7 +271,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/interreguler"
                     android:gravity="center"
-                    android:text="Mon"
+                    android:text="Thu"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -282,7 +282,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/interbold"
                     android:gravity="center"
-                    android:text="03"
+                    android:text="06"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -307,7 +307,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/interreguler"
                     android:gravity="center"
-                    android:text="Mon"
+                    android:text="Fri"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -318,7 +318,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/interbold"
                     android:gravity="center"
-                    android:text="03"
+                    android:text="07"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -344,7 +344,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/interreguler"
                     android:gravity="center"
-                    android:text="Mon"
+                    android:text="Sat"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -355,7 +355,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/interbold"
                     android:gravity="center"
-                    android:text="03"
+                    android:text="08"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -381,7 +381,7 @@
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/interreguler"
                     android:gravity="center"
-                    android:text="Mon"
+                    android:text="Sun"
                     android:textColor="@color/black"
                     android:textSize="16sp" />
 
@@ -392,7 +392,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/interbold"
                     android:gravity="center"
-                    android:text="03"
+                    android:text="09"
                     android:textColor="@color/black"
                     android:textSize="20sp" />
 
@@ -649,7 +649,7 @@
                     android:textSize="14sp"
                     app:drawableStartCompat="@drawable/bca" />
 
-                <RadioButton
+                <androidx.appcompat.widget.AppCompatRadioButton
                     android:layout_width="28dp"
                     android:layout_height="28dp"
                     android:layout_marginStart="115dp"
