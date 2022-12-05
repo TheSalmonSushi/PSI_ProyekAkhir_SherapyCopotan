@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:scrollbars="none">
 
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -333,6 +334,7 @@
                 android:background="@drawable/buttoncard"
                 android:fontFamily="@font/lexendbold"
                 android:text="Appointment"
+                android:textColor="@color/white"
                 android:textAllCaps="false"
                 android:textSize="12sp" />
         </LinearLayout>
