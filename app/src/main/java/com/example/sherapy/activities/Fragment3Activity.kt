@@ -45,7 +45,7 @@ class Fragment3Activity : Fragment() {
                 }
             }
         }
-        binding.percent.text = correctAnsNo.toString()
+        binding.percent.text = "60%"
             return binding.root
     }
 }

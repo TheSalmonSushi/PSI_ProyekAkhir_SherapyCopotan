@@ -129,7 +129,7 @@ class Fragment2Activity : Fragment() {
     }
 
     fun countdown(){
-        val duration:Long= TimeUnit.SECONDS.toMillis(20)
+        var duration:Long= TimeUnit.SECONDS.toMillis(20)
 
         object : CountDownTimer(duration, 1000) {
             override fun onTick(millisUntilFinished: Long) {
@@ -142,17 +142,7 @@ class Fragment2Activity : Fragment() {
                 countDown.text = sDuration
             }
             override fun onFinish() {
-                index++
-                if (index<questionsList.size){
-                    questionModel=questionsList[index]
-                    setAllQuestions()
-                    enableButton()
-                    countdown()
-                }
-                else{
-                    gameResult()
-
-                }
+                duration = TimeUnit.SECONDS.toMillis(0)
             }
         }.start()
     }
